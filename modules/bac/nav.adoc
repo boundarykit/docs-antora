@@ -1,0 +1,12 @@
+.BAC
+* bac
+** xref:yaml-schema.adoc[YAML schema]
+** xref:cli-installation.adoc[CLI installation]
+** xref:initialize-a-workspace.adoc[Initialize a workspace]
+** xref:validate-a-manifest.adoc[Validate a manifest]
+** xref:plan-changes.adoc[Plan changes]
+** xref:apply-revisions.adoc[Apply revisions]
+** xref:detect-drift.adoc[Detect drift]
+** xref:gitops-workflows.adoc[GitOps workflows]
+** xref:promote-configuration.adoc[Promote configuration]
+** xref:recover-a-revision.adoc[Recover a revision]

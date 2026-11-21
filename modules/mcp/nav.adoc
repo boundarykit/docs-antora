@@ -1,0 +1,12 @@
+.MCP
+* mcp
+** xref:server-overview.adoc[Server overview]
+** xref:tool-catalog.adoc[Tool catalog]
+** xref:authentication.adoc[Authentication]
+** xref:local-stdio.adoc[Local stdio]
+** xref:hosted-sse.adoc[Hosted SSE]
+** xref:claude-setup.adoc[Claude setup]
+** xref:cursor-setup.adoc[Cursor setup]
+** xref:codex-setup.adoc[Codex setup]
+** xref:resource-discovery.adoc[Resource discovery]
+** xref:tool-permissions.adoc[Tool permissions]

@@ -1,0 +1,9 @@
+name: boundarykit
+title: BoundaryKit
+version: v2
+nav:
+  - modules/ROOT/nav.adoc
+  - modules/api/nav.adoc
+  - modules/mcp/nav.adoc
+  - modules/bac/nav.adoc
+  - modules/cicd/nav.adoc

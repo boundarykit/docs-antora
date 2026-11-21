@@ -1,0 +1,78 @@
+= Create evaluation
+
+`POST /v2/evaluations`
+
+== Parameters
+
+[source,json]
+----
+[
+  {
+    "name": "X-Organization-Id",
+    "in": "header",
+    "required": true,
+    "schema": {
+      "type": "string"
+    }
+  }
+]
+----
+
+== Request body
+
+[source,json]
+----
+{
+  "required": true,
+  "content": {
+    "application/json": {
+      "schema": {
+        "$ref": "#/components/schemas/Record"
+      }
+    }
+  }
+}
+----
+
+== Responses
+
+[source,json]
+----
+{
+  "200": {
+    "description": "Request completed.",
+    "content": {
+      "application/json": {
+        "schema": {
+          "$ref": "#/components/schemas/Record"
+        }
+      }
+    }
+  },
+  "202": {
+    "description": "Queued for processing."
+  },
+  "403": {
+    "description": "Scope denied",
+    "content": {
+      "application/json": {
+        "schema": {
+          "$ref": "#/components/schemas/Error"
+        }
+      }
+    }
+  },
+  "503": {
+    "description": "Service unavailable",
+    "content": {
+      "application/json": {
+        "schema": {
+          "$ref": "#/components/schemas/Error"
+        }
+      }
+    }
+  }
+}
+----
+
+xref:ROOT:index.adoc[BoundaryKit overview]

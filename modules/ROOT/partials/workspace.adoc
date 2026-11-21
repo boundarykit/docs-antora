@@ -1,0 +1,4 @@
+[NOTE]
+====
+Resolve the workspace and calling identity before comparing records.
+====

@@ -1,0 +1,12 @@
+.CICD
+* cicd
+** xref:github-actions.adoc[GitHub Actions]
+** xref:gitlab-ci.adoc[GitLab CI]
+** xref:pr-policy-gates.adoc[PR policy gates]
+** xref:preview-environments.adoc[Preview environments]
+** xref:rollback.adoc[Rollback]
+** xref:protected-branches.adoc[Protected branches]
+** xref:artifact-promotion.adoc[Artifact promotion]
+** xref:secret-injection.adoc[Secret injection]
+** xref:failure-diagnostics.adoc[Failure diagnostics]
+** xref:release-evidence.adoc[Release evidence]

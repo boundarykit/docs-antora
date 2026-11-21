@@ -1,0 +1,32 @@
+= alert.opened
+
+Deliver change notification
+
+== Request body
+
+[source,json]
+----
+{
+  "required": true,
+  "content": {
+    "application/json": {
+      "schema": {
+        "$ref": "#/components/schemas/alert.opened"
+      }
+    }
+  }
+}
+----
+
+== Responses
+
+[source,json]
+----
+{
+  "204": {
+    "description": "Delivery accepted."
+  }
+}
+----
+
+xref:ROOT:index.adoc[BoundaryKit overview]
