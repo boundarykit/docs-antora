@@ -77,3 +77,10 @@
 ** xref:monitor/error-budgets.adoc[Error budgets]
 ** xref:monitor/triage-dashboards.adoc[Triage dashboards]
 ** xref:monitor/usage-reports.adoc[Usage reports]
+
+** xref:overview.adoc[BoundaryKit]
+** xref:documentation/troubleshooting.adoc[Troubleshoot a denied deployment]
+** xref:administration/security-compliance.adoc[Security and compliance]
+** xref:cookbook/BoundaryQL-Reference.adoc[BoundaryQL: Advanced Query Reference]
+** xref:documentation/policy-expression-reference.adoc[Policy expression reference]
+** xref:documentation/audit-event-catalog.adoc[Audit event catalog]

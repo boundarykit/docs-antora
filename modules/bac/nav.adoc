@@ -10,3 +10,5 @@
 ** xref:gitops-workflows.adoc[GitOps workflows]
 ** xref:promote-configuration.adoc[Promote configuration]
 ** xref:recover-a-revision.adoc[Recover a revision]
+
+** xref:index.adoc[Manage policies as code]

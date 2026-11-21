@@ -10,3 +10,5 @@
 ** xref:codex-setup.adoc[Codex setup]
 ** xref:resource-discovery.adoc[Resource discovery]
 ** xref:tool-permissions.adoc[Tool permissions]
+
+** xref:index.adoc[Connect an MCP client]

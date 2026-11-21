@@ -1,48 +1,148 @@
 = Decision vocabulary
-:page-aliases: ROOT:handbook/glossary.adoc, ROOT:learn/glossary.adoc
+:stem: latexmath
 
-[[workspace-context]]
-== Workspace context
+Terms used in policy reviews and incident reports.
 
-Use decision vocabulary in a scoped workspace and verify the result with sandboxes records. Select a workspace with representative test data and record the active revision before you start. A response from a different workspace can look valid even when it contains none of the expected records.
+== ACL
 
-Resolve the calling identity, its workspace, and the policy revision before tracing a request. Keep these values together when comparing results from two environments.
+ACL — access control list. See link:/boundarykit/v2/documentation/core-concepts.html[decision model] and link:/boundarykit/v2/architecture.html#request-path[request path].
 
-image::ROOT:diagrams/flow-04.svg[BoundaryKit request flow]
+== API
 
-[[read-the-baseline]]
-== Read the baseline
+API — application programming interface. See link:/boundarykit/v2/documentation/core-concepts.html[decision model] and link:/boundarykit/v2/architecture.html#request-path[request path].
 
-Request the first page of sandboxes using the v2 endpoint. Supply the organization explicitly on every request. Load the key from your shell environment and keep the expanded command out of build logs.
+== BaC
 
-[source,bash]
-----
-curl --fail-with-body "https://api.boundarykit.com/v2/sandboxes" -H "X-API-Key: $BKIT_KEY" -H "X-Organization-Id: $BKIT_ORG"
-----
+BaC — boundaries as code. See link:/boundarykit/v2/documentation/core-concepts.html[decision model] and link:/boundarykit/v2/architecture.html#request-path[request path].
 
-Compare the returned identifiers with the records you expect to see in this workspace. An empty result is a successful read. Verify the workspace selection before creating a replacement record or changing a policy.
+== CI
 
-[[verify-the-result]]
-== Verify the result
+CI — continuous integration. See link:/boundarykit/v2/documentation/core-concepts.html[decision model] and link:/boundarykit/v2/architecture.html#request-path[request path].
 
-Repeat the read with a credential scoped to a separate test organization. Check the response status before processing the body. Preserve the workspace identifier and response time alongside the revision so another operator can reproduce the observation.
+== DSL
 
-[options="header"]
-|===
-| Response | Operator action 
-| 200 | Inspect the returned sandboxes records. 
-| 403 | Verify the organization and identity scope. 
-| 503 | Retry the read after a bounded delay. 
-|===
+DSL — domain-specific language. See link:/boundarykit/v2/documentation/core-concepts.html[decision model] and link:/boundarykit/v2/architecture.html#request-path[request path].
 
-[TIP]
-====
-Keep credentials out of the evidence bundle. Store a request identifier and a redacted response instead.
-====
+== IdP
 
-For a walkthrough of the service boundary, see xref:ROOT:architecture.adoc#workspace-context[Runtime architecture].
+IdP — identity provider. See link:/boundarykit/v2/documentation/core-concepts.html[decision model] and link:/boundarykit/v2/architecture.html#request-path[request path].
 
-[[acceptance-check]]
-== Acceptance check
+== JWT
 
-Record the acceptance criteria for decision vocabulary in the workspace change log. Run the check with a known input and save the observed result beside the configuration revision. Repeat after promotion using the same input and compare both records.
+JWT — JSON web token. See link:/boundarykit/v2/documentation/core-concepts.html[decision model] and link:/boundarykit/v2/architecture.html#request-path[request path].
+
+== MCP
+
+MCP — Model Context Protocol. See link:/boundarykit/v2/documentation/core-concepts.html[decision model] and link:/boundarykit/v2/architecture.html#request-path[request path].
+
+== RBAC
+
+RBAC — role-based access control. See link:/boundarykit/v2/documentation/core-concepts.html[decision model] and link:/boundarykit/v2/architecture.html#request-path[request path].
+
+== SIEM
+
+SIEM — security information and event management. See link:/boundarykit/v2/documentation/core-concepts.html[decision model] and link:/boundarykit/v2/architecture.html#request-path[request path].
+
+== SLO
+
+SLO — service level objective. See link:/boundarykit/v2/documentation/core-concepts.html[decision model] and link:/boundarykit/v2/architecture.html#request-path[request path].
+
+== SSO
+
+SSO — single sign-on. See link:/boundarykit/v2/documentation/core-concepts.html[decision model] and link:/boundarykit/v2/architecture.html#request-path[request path].
+
+== actor
+
+actor — calling identity. See link:/boundarykit/v2/documentation/core-concepts.html[decision model] and link:/boundarykit/v2/architecture.html#request-path[request path].
+
+== allow
+
+allow — positive decision. See link:/boundarykit/v2/documentation/core-concepts.html[decision model] and link:/boundarykit/v2/architecture.html#request-path[request path].
+
+== archive
+
+archive — cold retention tier. See link:/boundarykit/v2/documentation/core-concepts.html[decision model] and link:/boundarykit/v2/architecture.html#request-path[request path].
+
+== boundary
+
+boundary — enforcement perimeter. See link:/boundarykit/v2/documentation/core-concepts.html[decision model] and link:/boundarykit/v2/architecture.html#request-path[request path].
+
+== capability
+
+capability — permitted action. See link:/boundarykit/v2/documentation/core-concepts.html[decision model] and link:/boundarykit/v2/architecture.html#request-path[request path].
+
+== claim
+
+claim — identity assertion. See link:/boundarykit/v2/documentation/core-concepts.html[decision model] and link:/boundarykit/v2/architecture.html#request-path[request path].
+
+== cursor
+
+cursor — continuation marker. See link:/boundarykit/v2/documentation/core-concepts.html[decision model] and link:/boundarykit/v2/architecture.html#request-path[request path].
+
+== deny
+
+deny — negative decision. See link:/boundarykit/v2/documentation/core-concepts.html[decision model] and link:/boundarykit/v2/architecture.html#request-path[request path].
+
+== digest
+
+digest — content hash. See link:/boundarykit/v2/documentation/core-concepts.html[decision model] and link:/boundarykit/v2/architecture.html#request-path[request path].
+
+== drift
+
+drift — revision mismatch. See link:/boundarykit/v2/documentation/core-concepts.html[decision model] and link:/boundarykit/v2/architecture.html#request-path[request path].
+
+== effect
+
+effect — rule outcome. See link:/boundarykit/v2/documentation/core-concepts.html[decision model] and link:/boundarykit/v2/architecture.html#request-path[request path].
+
+== export
+
+export — evidence bundle. See link:/boundarykit/v2/documentation/core-concepts.html[decision model] and link:/boundarykit/v2/architecture.html#request-path[request path].
+
+== grant
+
+grant — assigned permission. See link:/boundarykit/v2/documentation/core-concepts.html[decision model] and link:/boundarykit/v2/architecture.html#request-path[request path].
+
+== hold
+
+hold — retention override. See link:/boundarykit/v2/documentation/core-concepts.html[decision model] and link:/boundarykit/v2/architecture.html#request-path[request path].
+
+== nonce
+
+nonce — one-time value. See link:/boundarykit/v2/documentation/core-concepts.html[decision model] and link:/boundarykit/v2/architecture.html#request-path[request path].
+
+== organization
+
+organization — tenant. See link:/boundarykit/v2/documentation/core-concepts.html[decision model] and link:/boundarykit/v2/architecture.html#request-path[request path].
+
+== plan
+
+plan — proposed change. See link:/boundarykit/v2/documentation/core-concepts.html[decision model] and link:/boundarykit/v2/architecture.html#request-path[request path].
+
+== receipt
+
+receipt — decision record. See link:/boundarykit/v2/documentation/core-concepts.html[decision model] and link:/boundarykit/v2/architecture.html#request-path[request path].
+
+== revision
+
+revision — immutable snapshot. See link:/boundarykit/v2/documentation/core-concepts.html[decision model] and link:/boundarykit/v2/architecture.html#request-path[request path].
+
+== role
+
+role — permission set. See link:/boundarykit/v2/documentation/core-concepts.html[decision model] and link:/boundarykit/v2/architecture.html#request-path[request path].
+
+== sandbox
+
+sandbox — isolated runtime. See link:/boundarykit/v2/documentation/core-concepts.html[decision model] and link:/boundarykit/v2/architecture.html#request-path[request path].
+
+== scope
+
+scope — access constraint. See link:/boundarykit/v2/documentation/core-concepts.html[decision model] and link:/boundarykit/v2/architecture.html#request-path[request path].
+
+== session
+
+session — bounded interaction. See link:/boundarykit/v2/documentation/core-concepts.html[decision model] and link:/boundarykit/v2/architecture.html#request-path[request path].
+
+== trace
+
+trace — correlated request path. See link:/boundarykit/v2/documentation/core-concepts.html[decision model] and link:/boundarykit/v2/architecture.html#request-path[request path].

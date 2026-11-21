@@ -220,3 +220,5 @@
 ** xref:events/evaluation.completed.adoc[evaluation.completed]
 ** xref:events/alert.opened.adoc[alert.opened]
 ** xref:events/token.revoked.adoc[token.revoked]
+
+** xref:index.adoc[API reference]

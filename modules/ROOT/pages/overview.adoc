@@ -1,0 +1,18 @@
+= BoundaryKit
+:stem: latexmath
+
+Decide which tools an agent may call, enforce the decision at dispatch, and trace it to a policy revision.
+
+== Start here
+
+link:/boundarykit/v2/quickstart.html[image:cards/card-quickstart.svg[quickstart illustration]]
+
+link:/boundarykit/v2/documentation/core-concepts.html[image:cards/card-policies.svg[policies illustration]]
+
+link:/boundarykit/v2/api/index.html[image:cards/card-api.svg[api illustration]]
+
+link:/boundarykit/v2/mcp/index.html[image:cards/card-mcp.svg[mcp illustration]]
+
+link:/boundarykit/v2/bac/index.html[image:cards/card-bac.svg[bac illustration]]
+
+link:/boundarykit/v2/administration/security-compliance.html[image:cards/card-security.svg[security illustration]]

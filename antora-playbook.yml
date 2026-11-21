@@ -5,6 +5,7 @@ content:
   sources:
     - url: .
       branches: HEAD
+      start_paths: [., v1]
 ui:
   bundle:
     url: ./ui
